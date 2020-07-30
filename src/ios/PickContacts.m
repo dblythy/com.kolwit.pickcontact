@@ -13,7 +13,7 @@
 
 - (void)contactPicker:(CNContactPickerViewController *)picker didSelectContacts:(NSArray *)contacts {
 NSMutableArray *result = [[NSMutableArray alloc] init];
-for (int i=0;i<contacts.length;i++) {
+for (int i=0;i<[contacts count];i++) {
   CNContact *contact = contacts[i];
 	NSString *appContactPhone = @"";
 	if( contact.phoneNumbers) appContactPhone = [[[contact.phoneNumbers firstObject] value] stringValue];
@@ -48,7 +48,7 @@ for (int i=0;i<contacts.length;i++) {
 	[appContact setObject:@"" forKey: @"contactId"];
 	*/
 	 }
-	CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray:appContact];
+	CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsArray:result];
 	NSString * thisCallBackID = self.callbackID;
 	[self.commandDelegate sendPluginResult:pluginResult callbackId:thisCallBackID];
 	[self.viewController dismissViewControllerAnimated:YES completion:nil];
