@@ -18,7 +18,7 @@
 	
 	NSString *appContactEmail = @"";
 	if( contact.emailAddresses) appContactEmail = [[contact.emailAddresses firstObject] value];
-	if ( appContactEmail == nil ) appContactEmail = @""
+	if ( appContactEmail == nil ) appContactEmail = @"";
 		
 	NSString *appContactPostaladdress = @"";
         CNPostalAddressFormatter *formatter = [[CNPostalAddressFormatter alloc] init];
