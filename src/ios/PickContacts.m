@@ -16,6 +16,7 @@ NSMutableArray *result = [[NSMutableArray alloc] init];
 for (int i=0;i<[contacts count];i++) {
   CNContact *contact = contacts[i];
 	NSString *appContactPhone = @"";
+	
 	if( contact.phoneNumbers) appContactPhone = [[[contact.phoneNumbers firstObject] value] stringValue];
 	if ( appContactPhone == nil ) appContactPhone = @"";
 	
@@ -23,8 +24,8 @@ for (int i=0;i<[contacts count];i++) {
 	if( contact.emailAddresses) appContactEmail = [[contact.emailAddresses firstObject] value];
 	if ( appContactEmail == nil ) appContactEmail = @"";
 	
-	NSString *appContactPostaladdress = @"";
-	if( contact.postalAddresses) appContactPostaladdress = [[contact.postalAddresses firstObject] value];
+        CNPostalAddressFormatter *formatter = [[CNPostalAddressFormatter alloc] init];
+	if( contact.postalAddresses) appContactPostaladdress = [formatter stringFromPostalAddress:[[contact.postalAddresses firstObject] value]];
 	if ( appContactPostaladdress == nil ) appContactPostaladdress = @"";
 	
 	NSString *appContactName = [[contact.givenName stringByAppendingString:@" "] stringByAppendingString:contact.familyName];
