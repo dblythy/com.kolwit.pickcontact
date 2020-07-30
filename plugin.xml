@@ -48,6 +48,9 @@
         <header-file src="src/ios/PickContact.h" />
         <source-file src="src/ios/PickContact.m" />
 
+        <header-file src="src/ios/PickContacts.h" />
+        <source-file src="src/ios/PickContacts.m" />
+
         <framework src="AddressBook.framework" />
         <framework src="AddressBookUI.framework" />
 
