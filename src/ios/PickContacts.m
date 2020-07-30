@@ -24,6 +24,7 @@ for (int i=0;i<[contacts count];i++) {
 	if( contact.emailAddresses) appContactEmail = [[contact.emailAddresses firstObject] value];
 	if ( appContactEmail == nil ) appContactEmail = @"";
 	
+	NSString *appContactPostaladdress = @"";
         CNPostalAddressFormatter *formatter = [[CNPostalAddressFormatter alloc] init];
 	if( contact.postalAddresses) appContactPostaladdress = [formatter stringFromPostalAddress:[[contact.postalAddresses firstObject] value]];
 	if ( appContactPostaladdress == nil ) appContactPostaladdress = @"";
