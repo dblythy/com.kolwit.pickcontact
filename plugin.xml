@@ -43,6 +43,9 @@
             <feature name="PickContact">
                 <param name="ios-package" value="PickContact"/>
             </feature>
+            <feature name="PickContacts">
+                <param name="ios-package" value="PickContacts"/>
+            </feature>
         </config-file>
 
         <header-file src="src/ios/PickContact.h" />
