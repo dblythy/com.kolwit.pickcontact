@@ -3,7 +3,7 @@
 #import <ContactsUI/ContactsUI.h>
 #import <Cordova/CDVPlugin.h>
 
-@interface PickContact : CDVPlugin <CNContactPickerDelegate>
+@interface PickContacts : CDVPlugin <CNContactPickerDelegate>
 
 @property(strong) NSString* callbackID;
 
