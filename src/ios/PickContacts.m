@@ -1,7 +1,7 @@
-#import "PickContact.h"
+#import "PickContacts.h"
 #import <Cordova/CDVAvailability.h>
 
-@implementation PickContact;
+@implementation PickContacts;
 @synthesize callbackID;
 
 - (void)chooseContacts:(CDVInvokedUrlCommand*)command{
