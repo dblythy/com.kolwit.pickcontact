@@ -23,6 +23,14 @@ window.plugins.PickContact.chooseContact(function (contactInfo) {
 });
 ```
 
+WIP Multiple contacts:
+
+```js
+window.plugins.PickContacts.chooseContact(function (contactInfos) {
+
+});
+```
+
 The method which will return a JSON. Example:
 
 ```json
