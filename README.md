@@ -26,7 +26,7 @@ window.plugins.PickContact.chooseContact(function (contactInfo) {
 WIP Multiple contacts:
 
 ```js
-window.plugins.PickContacts.chooseContact(function (contactInfos) {
+window.plugins.PickContact.chooseContacts(function (contactInfos) {
 
 });
 ```
